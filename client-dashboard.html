@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard - TechForge</title>
+    <link rel="stylesheet" href="css/client-dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Client Dashboard</h1>
+        <nav>
+            <a href="#" id="logoutBtn">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Gigs</h2>
+        <div id="gigList"></div>
+        <h3>Post a New Gig</h3>
+        <form id="postGigForm">
+            <input type="text" id="gigTitle" placeholder="Gig Title" required>
+            <textarea id="gigDesc" placeholder="Gig Description" required></textarea>
+            <input type="number" id="gigPrice" placeholder="Price" required>
+            <button type="submit">Post Gig</button>
+        </form>
+    </main>
+
+    <script src="js/client.js"></script>
+</body>
+</html>
