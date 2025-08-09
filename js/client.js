@@ -12,12 +12,12 @@ document.getElementById("postGigForm")?.addEventListener("submit", async (e) => 
     e.preventDefault();
     const title = document.getElementById("gigTitle").value;
     const description = document.getElementById("gigDesc").value;
-    const price = document.getElementById("gigPrice").value;
+    const budget = document.getElementById("gigPrice").value;
 
     await fetch(`${backendUrl}/projects`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, description, price, postedBy: user.id, postedRole: "CLIENT" })
+        body: JSON.stringify({ title, description, budget, postedRole: "CLIENT", client_id: user.id, })
     });
 
     loadGigs();
